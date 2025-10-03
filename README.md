@@ -1,59 +1,98 @@
-# CV Porfolio
+# 💻 [brunofelix-dev](https://www.brunofelix.dev)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+[![Portfolio](https://img.shields.io/badge/visit-portfolio-blue)](https://www.brunofelix.dev)
 
-## Development server
+### 📖 About the Project
 
-To start a local development server, run:
+This is my online CV portfolio project built with Angular 20. I created it to showcase my professional background, skills, and projects throughout my career.  
 
-```bash
-ng serve
+### 🛠️ Technologies Used
+
+- [Angular](https://angular.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Node.js](https://nodejs.org/)
+- [HTML5](https://www.w3.org/)
+- [Sass](https://sass-lang.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
+
+### 📘 Git Guide
+
+This project uses **Gitflow**, **Conventional Commits**, and **Gitmoji** to keep the Git history clean and consistent.  
+
+### 🔀 Gitflow
+
+- **main** → stable production releases  
+- **develop** → main development branch  
+- **feature/** → new features  
+- **bugfix/** → fixes during development  
+- **hotfix/** → urgent fixes in production  
+- **release/** → release preparation  
+
+---
+
+### 🌿 Branch Naming Convention
+
+Always use **kebab-case** (lowercase letters and hyphens).  
+
+| Type     | Pattern                        | Example                       |
+|----------|--------------------------------|-------------------------------|
+| Feature  | `feature/feature-name`         | `feature/google-login`        |
+| Bugfix   | `bugfix/bug-description`       | `bugfix/fix-header-layout`    |
+| Hotfix   | `hotfix/hotfix-description`    | `hotfix/fix-ios-crash`        |
+| Release  | `release/x.y.z`                | `release/1.2.0`               |
+
+---
+
+### 📝 Commit Convention
+
+Commit message format:
+
+```
+<emoji> <type>(<scope>): <short description>
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Types (Conventional Commits)
+- **feat** → new feature  
+- **fix** → bug fix  
+- **docs** → documentation  
+- **style** → formatting/style (no code impact)  
+- **refactor** → code refactor  
+- **perf** → performance improvement  
+- **test** → add or update tests  
+- **chore** → maintenance, configs, dependencies  
+- **build** → build or CI/CD changes  
 
-## Code scaffolding
+### Emojis (Most Used Gitmoji)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Emoji | Code | Type     | Description                         |
+|-------|------|----------|-------------------------------------|
+| 🎉    | `:tada:`          | feat     | Starting project                     |
+| ✨    | `:sparkles:`          | feat     | New feature                     |
+| 🐛    | `:bug:`               | fix      | Bug fix                         |
+| 📝    | `:memo:`              | docs     | Documentation                   |
+| 🎨    | `:art:`               | style    | Code style improvements         |
+| ♻️    | `:recycle:`           | refactor | Refactor                        |
+| ⚡    | `:zap:`               | perf     | Performance improvement         |
+| ✅    | `:white_check_mark:`  | test     | Tests                           |
+| 🔧    | `:wrench:`            | chore    | Configurations and maintenance  |
+| 📦    | `:package:`           | build    | Build and dependencies          |
+| 🔒    | `:lock:`              | feat     | Security                        |
+| 🔥    | `:fire:`              | refactor | Remove code, file or package    |
+| 🚀    | `:rocket:`            | build    | Deploy                          |
+| 💄    | `:lipstick:`          | style    | Add or update UI or style files |
+| 🍱    | `:bento:`             | style    | Add or update assets            |
+| 🔖    | `:bookmark:`          | build    | Release / Version tags          |
 
-```bash
-ng generate component component-name
+### Commit Examples
+
+```
+✨ feat(auth): add Google login
+🐛 fix(dashboard): fix error when loading stats
+📝 docs(readme): update installation instructions
+♻️ refactor(core): improve API service readability
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✌️ By following these rules, we’ll have a clean, organized, and maintainable Git history!
