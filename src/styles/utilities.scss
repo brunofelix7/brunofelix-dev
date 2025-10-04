@@ -1,0 +1,280 @@
+/* Common Layout Patterns */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Common Interactive Elements */
+.interactive-element {
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.interactive-element:hover {
+    transform: translateY(-2px);
+}
+
+/* Common Button Styles */
+.btn-base {
+    background: var(--bg-secondary);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-weight: 500;
+}
+
+.btn-primary {
+    @extend .btn-base;
+    background: var(--neon-emerald-10);
+    border-color: var(--neon-emerald-30);
+    color: var(--neon-emerald);
+}
+
+.btn-primary:hover {
+    background: var(--neon-emerald-20);
+    border-color: var(--neon-emerald);
+    box-shadow: 0 0 10px var(--neon-emerald-20);
+}
+
+.btn-secondary {
+    @extend .btn-base;
+    background: none;
+    color: var(--neon-emerald);
+    border: 1.5px solid var(--neon-emerald);
+}
+
+.btn-secondary:hover {
+    background: var(--neon-emerald-10);
+    box-shadow: 0 0 6px var(--neon-emerald-15);
+}
+
+/* Common Card Styles */
+.card-base {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neon-emerald-10);
+    transition: all var(--transition-normal);
+}
+
+.card-hover {
+    @extend .card-base;
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    border-color: var(--neon-emerald);
+    box-shadow: 0 20px 40px var(--neon-emerald-20);
+}
+
+/* Common Text Effects */
+.text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-shadow-emerald {
+    text-shadow: 0 0 30px var(--neon-emerald-50);
+}
+
+.text-shadow-emerald-small {
+    text-shadow: 0 0 10px var(--neon-emerald);
+}
+
+.text-shadow-emerald-medium {
+    text-shadow: 0 0 20px var(--neon-emerald-50);
+}
+
+/* Common Box Shadow Effects */
+.shadow-emerald-light {
+    box-shadow: 0 0 10px var(--neon-emerald-20);
+}
+
+.shadow-emerald-medium {
+    box-shadow: 0 8px 25px var(--neon-emerald-20);
+}
+
+.shadow-emerald-strong {
+    box-shadow: 0 10px 30px var(--black-30);
+}
+
+.shadow-emerald-glow {
+    box-shadow: 0 0 20px var(--neon-emerald-30);
+}
+
+/* Common Border Effects */
+.border-emerald-light {
+    border: 1px solid var(--neon-emerald-10);
+}
+
+.border-emerald-medium {
+    border: 1px solid var(--neon-emerald-30);
+}
+
+.border-emerald-strong {
+    border: 1px solid var(--neon-emerald);
+}
+
+/* Common Background Patterns */
+.bg-pattern-grid {
+    background-image: 
+        linear-gradient(var(--neon-emerald-02) 1px, transparent 1px),
+        linear-gradient(90deg, var(--neon-emerald-02) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
+.bg-pattern-grid-large {
+    background-image: 
+        linear-gradient(var(--neon-emerald-02) 1px, transparent 1px),
+        linear-gradient(90deg, var(--neon-emerald-02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+/* Common Transform Effects */
+.hover-lift {
+    transition: transform var(--transition-normal);
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+.hover-lift-large {
+    transition: transform var(--transition-normal);
+}
+
+.hover-lift-large:hover {
+    transform: translateY(-8px);
+}
+
+/* Common Status Indicators */
+.status-badge {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-live {
+    @extend .status-badge;
+    background: var(--neon-green-20);
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green-30);
+}
+
+.status-wip {
+    @extend .status-badge;
+    background: var(--neon-lime-20);
+    color: var(--neon-lime);
+    border: 1px solid var(--neon-lime);
+    box-shadow: 0 0 10px var(--neon-lime-30);
+}
+
+.status-paused {
+    @extend .status-badge;
+    background: var(--red-20);
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+    box-shadow: 0 0 10px var(--red-30);
+}
+
+.status-profitable {
+    @extend .status-badge;
+    background: var(--neon-emerald-20);
+    color: var(--neon-emerald);
+    border: 1px solid var(--neon-emerald);
+    box-shadow: 0 0 10px var(--neon-emerald-30);
+}
+
+/* Common Social Media Hover Effects */
+.social-hover-github:hover {
+    border-color: var(--github-color);
+    box-shadow: 0 10px 25px var(--dark-gray-40);
+}
+
+.social-hover-linkedin:hover {
+    border-color: var(--linkedin-color);
+    box-shadow: 0 10px 25px var(--linkedin-blue-40);
+}
+
+.social-hover-youtube:hover {
+    border-color: var(--youtube-color);
+    box-shadow: 0 10px 25px var(--youtube-red-40);
+}
+
+.social-hover-emerald:hover {
+    border-color: var(--neon-emerald);
+    box-shadow: 0 10px 25px var(--neon-emerald-20);
+}
+
+/* Common Loading States */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--neon-emerald-10);
+    border-top: 3px solid var(--neon-emerald);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Common Placeholder Styles */
+.placeholder-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.placeholder-icon i {
+    font-size: 4rem;
+    color: var(--neon-emerald);
+    opacity: 0.4;
+    text-shadow: 0 0 10px var(--neon-emerald-30);
+    transition: all var(--transition-normal);
+}
+
+.placeholder-icon:hover i {
+    opacity: 0.6;
+    transform: scale(1.1);
+} 
