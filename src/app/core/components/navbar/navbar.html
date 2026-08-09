@@ -1,23 +1,18 @@
 <header class="header">
     <div class="header-content">
-  
+
       <!-- Logo/Home Button -->
-      <a routerLink="/" class="logo" aria-label="Home">
+      <a routerLink="/home" class="logo" aria-label="Home">
         <span class="logo-text">Bruno Felix</span>
       </a>
-  
+
       <!-- Navigation Links -->
       <nav class="nav-links">
-        <a routerLink="/"
+        <a routerLink="/home"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}"
           class="nav-link">
           Home
-        </a>
-        <a routerLink="/certificates"
-          routerLinkActive="active"
-          class="nav-link">
-          Certificates
         </a>
         <a routerLink="/cv"
           routerLinkActive="active"
@@ -25,7 +20,7 @@
           CV
         </a>
       </nav>
-  
+
       <!-- Localization Selector (desktop) -->
       <div class="locale-selector">
         @for (lang of languages; track lang) {
@@ -38,7 +33,7 @@
           </button>
         }
       </div>
-  
+
       <!-- Mobile Menu Button -->
       <button class="mobile-menu-btn" (click)="toggleMobileMenu()" aria-label="Toggle menu">
         @if (!isMobileMenuOpen) {
@@ -49,26 +44,29 @@
         }
       </button>
     </div>
-  
+
     <!-- Mobile Menu -->
     <div class="mobile-menu" [class.open]="isMobileMenuOpen">
-      <a routerLink="/"
+      <a routerLink="/home"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}"
         class="mobile-nav-link"
         (click)="closeMobileMenu()">
+        Home
       </a>
       <a routerLink="/certificates"
         routerLinkActive="active"
         class="mobile-nav-link"
         (click)="closeMobileMenu()">
+        Certificates
       </a>
       <a routerLink="/cv"
         routerLinkActive="active"
         class="mobile-nav-link"
         (click)="closeMobileMenu()">
+        CV
       </a>
-  
+
       <!-- Localization Selector (mobile) -->
       <div class="locale-selector mobile-locale">
         @for (lang of languages; track lang) {
