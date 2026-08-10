@@ -1,0 +1,35 @@
+<app-container>
+  <div class="about-wrapper">
+    <div class="about-left" appFadeIn [delay]="0">
+      <p class="intro" appFadeIn [delay]="200">{{ 'about.title' | translate }}</p>
+      <h1 class="name" appFadeIn [delay]="400">Bruno</h1>
+      <p class="description" appFadeIn [delay]="600">
+        {{ 'about.description' | translate }}
+      </p>
+    </div>
+
+    <div class="about-right" appFadeIn [delay]="200">
+      <div class="socials" appFadeIn [delay]="400">
+        <a href="https://github.com/brunofelix7/" target="_blank" aria-label="GitHub" class="github" title="{{ 'links.github' | translate }}">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/brunofelix7/" target="_blank" aria-label="LinkedIn" class="linkedin" title="{{ 'links.linkedin' | translate }}">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:kirillakatov@gmail.com" aria-label="Email" aria-label="E-mail" class="email" title="{{ 'links.personalEmail' | translate }}">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="tags" appFadeIn [delay]="600">
+        <app-tag label="Android"></app-tag>
+        <app-tag label="Jetpack Compose"></app-tag>
+        <app-tag label="Kotlin"></app-tag>
+        <app-tag label="KMP"></app-tag>
+        <app-tag label="SwiftUI"></app-tag>
+        <app-tag label="UIKit"></app-tag>
+        <app-tag label="IA"></app-tag>
+      </div>
+    </div>
+  </div>
+</app-container>
