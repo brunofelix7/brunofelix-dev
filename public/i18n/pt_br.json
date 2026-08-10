@@ -1,0 +1,11 @@
+{
+  "about": {
+    "title": "Olá, eu sou",
+    "description": "Sou um Desenvolvedor Android apaixonado por construir aplicativos móveis modernos baseados em Clean Architecture. Sou especialista em desenvolvimento nativo usando Kotlin e Jetpack Compose. Atualmente, estou expandindo meus horizontes com Kotlin Multiplatform (KMP) e explorando como integrar IA generativa na infraestrutura mobile."
+  },
+  "links": {
+    "github": "GitHub",
+    "linked_in": "LinkedIn",
+    "personal_email": "Gmail"
+  }
+}
