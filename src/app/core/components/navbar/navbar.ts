@@ -1,11 +1,13 @@
 import { Component, effect, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgClass } from '@angular/common';
-import { Language } from '../../../shared/enums/language.enum';
+import { Language } from '../../../shared/enums';
+import { TranslationService } from '../../../services';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, NgClass],
+  imports: [RouterLink, RouterLinkActive, NgClass, TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss'
 })
@@ -19,16 +21,20 @@ export class NavBar {
     { code: Language.PT_BR, label: 'PT-BR' },
   ];
 
-  constructor() {
-    // Implement translation service
+  constructor(private readonly translationService: TranslationService) {
+    this.currentLangSignal.set(this.translationService.currentLang());
+
+    effect(() => {
+      this.currentLangSignal.set(this.translationService.currentLang());
+    });
   }
 
   public switchLanguage(lang: string): void {
-      console.log('switchLanguage()');
+    this.translationService.switchLanguage(lang);
   }
 
   public isLangActive(lang: string): boolean {
-    return false;
+    return this.currentLangSignal() === lang;
   }
 
   public toggleMobileMenu(): void {
