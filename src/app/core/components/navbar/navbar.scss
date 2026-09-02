@@ -208,6 +208,13 @@
     }
 }
 
+.flag-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
     .header-content {
         padding: 0 var(--spacing-md);

@@ -34,7 +34,7 @@
             (click)="switchLanguage(lang.code)"
             class="locale-btn"
             [attr.aria-label]="lang.label + ' language'">
-            {{ lang.label }}
+            <img [src]="lang.icon" [alt]="lang.label" class="flag-icon">
           </button>
         }
       </div>
@@ -80,7 +80,7 @@
             (click)="switchLanguage(lang.code); closeMobileMenu()"
             class="locale-btn"
             [attr.aria-label]="lang.label + ' language'">
-            {{ lang.label }}
+            <img [src]="lang.icon" [alt]="lang.label" class="flag-icon">
           </button>
         }
       </div>

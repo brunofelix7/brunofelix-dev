@@ -16,9 +16,9 @@ export class NavBar {
   private currentLangSignal = signal<string>('');
   public isMobileMenuOpen = false;
   public languages = [
-    { code: Language.EN, label: 'EN' },
-    { code: Language.ES, label: 'ES' },
-    { code: Language.PT_BR, label: 'PT-BR' },
+    { code: Language.EN, label: 'EN', icon: 'assets/icons/en-flag.svg' },
+    { code: Language.ES, label: 'ES', icon: 'assets/icons/es-flag.svg' },
+    { code: Language.PT_BR, label: 'PT-BR', icon: 'assets/icons/pt-br-flag.svg' },
   ];
 
   constructor(private readonly translationService: TranslationService) {
