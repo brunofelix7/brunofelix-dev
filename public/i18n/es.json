@@ -2,9 +2,7 @@
   "about": {
     "title": "Hola, soy",
     "description": [
-      "Soy un Ingeniero Android dedicado a crear experiencias móviles modernas y fluidas.",
-      "Especializado en desarrollo nativo con Kotlin y Jetpack Compose,",
-      "aplico Clean Architecture para construir aplicaciones escalables, robustas y de fácil mantenimiento."
+      "Soy un Ingeniero Android dedicado a crear experiencias móviles modernas y fluidas. Especializado en desarrollo nativo con Kotlin y Jetpack Compose."
     ]
   },
   "links": {
