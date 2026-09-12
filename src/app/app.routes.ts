@@ -19,6 +19,11 @@ export const routes: Routes = [
         loadComponent: () => import('./features/cv/cv').then((m) => m.Cv),
       },
       {
+        path: 'projects/:id',
+        loadComponent: () =>
+          import('./features/project-details/project-details').then((m) => m.ProjectDetails),
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'home',
