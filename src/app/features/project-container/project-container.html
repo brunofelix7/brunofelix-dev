@@ -1,0 +1,23 @@
+<app-container>
+  <div class="projects-header" appFadeIn [delay]="0">
+    <br/>
+    <h2 appFadeIn [delay]="200">{{ 'projects.title' | translate }}</h2>
+    <p appFadeIn [delay]="400">{{ 'projects.subtitle' | translate }}</p>
+  </div>
+
+  <div class="projects-grid">
+    @for (project of projects(); track trackByProject($index, project)) {
+      <app-project-card
+        [project]="project"
+        (cardClick)="onProjectClick($event)"
+        appFadeIn
+        [delay]="200">
+      </app-project-card>
+    }
+    @if (!hasProjects()) {
+      <div class="empty-state" appFadeIn [delay]="400">
+        {{ 'projects.empty' | translate }}
+      </div>
+    }
+  </div>
+</app-container>
