@@ -9,5 +9,19 @@
     "github": "GitHub",
     "linked_in": "LinkedIn",
     "personal_email": "Gmail"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "subtitle": "Explore my projects and achievements through my portfolio.",
+    "technologies": "Technologies Used",
+    "empty": "No projects found. Something went wrong. Please try refreshing the page.",
+    "sourceCode": "Source Code",
+    "demo": "Demo",
+    "download": "Download",
+    "projectLinks": "Project Links"
+  },
+  "projectDetails": {
+    "back": "Back",
+    "loading": "Loading project details..."
   }
 }
