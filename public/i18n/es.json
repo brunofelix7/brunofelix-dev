@@ -25,5 +25,22 @@
     "loading": "Cargando detalles del proyecto...",
     "expandImage": "Ampliar imagen",
     "closeImage": "Cerrar imagen"
+  },
+  "cv": {
+    "title": "Currículum",
+    "subtitle": "Mi trayectoria profesional completa, en el idioma seleccionado en el menú.",
+    "pdfPreview": "Vista previa del currículum en PDF",
+    "download": "Descargar PDF",
+    "none": "No se pudo cargar el currículum o no está disponible."
+  },
+  "certificates": {
+    "title": "Certificados y Logros",
+    "subtitle": "Cursos y certificaciones que he completado a lo largo de mi trayectoria.",
+    "pdfPreview": "Vista previa del certificado en PDF",
+    "download": "Descargar PDF",
+    "prev": "Certificado anterior",
+    "next": "Siguiente certificado",
+    "loading": "Cargando certificados...",
+    "none": "No se pudieron cargar los certificados o no hay ninguno disponible."
   }
 }

@@ -25,5 +25,22 @@
     "loading": "Loading project details...",
     "expandImage": "Expand image",
     "closeImage": "Close image"
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "subtitle": "My full professional background, shown in the language selected in the menu.",
+    "pdfPreview": "CV PDF preview",
+    "download": "Download PDF",
+    "none": "Failed to load the CV or it is unavailable."
+  },
+  "certificates": {
+    "title": "Certificates & Achievements",
+    "subtitle": "Courses and certifications I have completed along the way.",
+    "pdfPreview": "Certificate PDF preview",
+    "download": "Download PDF",
+    "prev": "Previous certificate",
+    "next": "Next certificate",
+    "loading": "Loading certificates...",
+    "none": "Failed to load the certificates or none are available."
   }
 }
