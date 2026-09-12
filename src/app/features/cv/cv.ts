@@ -16,6 +16,9 @@ export class Cv implements OnInit {
 
   public cvUrl = computed(() => this.cvService.getCvUrl(this.translationService.currentLang()));
 
+  /* FitH makes the viewer zoom to the container width instead of shrinking the tall page to fit its height */
+  public cvPreviewUrl = computed(() => `${this.cvUrl()}#view=FitH`);
+
   constructor(
     private cvService: CvService,
     private translationService: TranslationService

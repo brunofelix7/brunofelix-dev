@@ -13,7 +13,7 @@
     @if (cvAvailable()) {
       <div class="pdf-container">
         <iframe
-          [src]="cvUrl() | safe"
+          [src]="cvPreviewUrl() | safe"
           class="pdf-viewer"
           [title]="'cv.pdfPreview' | translate"
           frameborder="0"
