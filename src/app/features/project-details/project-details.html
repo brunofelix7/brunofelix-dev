@@ -20,9 +20,16 @@
               </iframe>
             </div>
           } @else if (project.image) {
-            <div class="project-image">
+            <button
+              class="project-image"
+              type="button"
+              [attr.aria-label]="'projectDetails.expandImage' | translate"
+              (click)="openImageModal()">
               <img [src]="project.image" [alt]="project.title" />
-            </div>
+              <span class="zoom-hint">
+                <i class="fas fa-expand"></i>
+              </span>
+            </button>
           } @else {
             <div class="placeholder-image">
               <div class="placeholder-icon">
@@ -98,6 +105,13 @@
         </div>
       </div>
     </div>
+
+    <app-image-modal
+      [isOpen]="isImageModalOpen()"
+      [src]="project.image"
+      [alt]="project.title"
+      [closeLabel]="'projectDetails.closeImage' | translate"
+      (closed)="closeImageModal()" />
   } @else {
     <div class="loading-state" appFadeIn [delay]="200">
       <div class="spinner"></div>

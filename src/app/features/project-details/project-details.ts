@@ -7,13 +7,14 @@ import { Project } from '../../shared/models';
 import { Util } from '../../shared/enums';
 import { ProjectsService, TranslationService } from '../../services';
 import { ContainerComponent } from '../../shared/components/container/container';
+import { ImageModal } from '../../shared/components/image-modal/image-modal';
 import { TagComponent } from '../../shared/components/tag/tag';
 import { FadeInDirective } from '../../shared/animations/fade-in.directive';
 import { SafeUrlPipe } from '../../shared/pipes/safe-url.pipe';
 
 @Component({
   selector: 'app-project-details',
-  imports: [ContainerComponent, TagComponent, FadeInDirective, SafeUrlPipe, TranslatePipe],
+  imports: [ContainerComponent, TagComponent, ImageModal, FadeInDirective, SafeUrlPipe, TranslatePipe],
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })
@@ -21,6 +22,7 @@ export class ProjectDetails implements OnInit {
   private currentProjectId = signal<string | null>(null);
 
   public project = signal<Project | null>(null);
+  public isImageModalOpen = signal(false);
 
   constructor(
     private route: ActivatedRoute,
@@ -51,6 +53,14 @@ export class ProjectDetails implements OnInit {
 
   public goBack(): void {
     this.location.back();
+  }
+
+  public openImageModal(): void {
+    this.isImageModalOpen.set(true);
+  }
+
+  public closeImageModal(): void {
+    this.isImageModalOpen.set(false);
   }
 
   private loadProject(projectId: string): void {

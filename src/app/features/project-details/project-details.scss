@@ -65,16 +65,53 @@
   }
 
   .project-image {
+    display: block;
+    position: relative;
     width: 100%;
+    padding: 0;
     border-radius: var(--radius-lg);
     overflow: hidden;
     background: var(--bg-tertiary);
     border: 1px solid var(--neon-emerald-10);
+    cursor: pointer;
+    transition: all var(--transition-normal);
 
     img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .zoom-hint {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black-30);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+
+      i {
+        font-size: 2rem;
+        color: var(--neon-emerald);
+        text-shadow: 0 0 15px var(--neon-emerald-30);
+        transform: scale(0.8);
+        transition: transform var(--transition-normal);
+      }
+    }
+
+    &:hover {
+      border-color: var(--neon-emerald);
+      box-shadow: 0 8px 25px var(--neon-emerald-20);
+
+      .zoom-hint {
+        opacity: 1;
+
+        i {
+          transform: scale(1);
+        }
+      }
     }
   }
 
