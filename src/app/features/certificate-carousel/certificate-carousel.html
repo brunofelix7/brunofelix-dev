@@ -1,0 +1,82 @@
+<div class="certificate-carousel">
+  @if (loading()) {
+    <div class="carousel-placeholder">
+      <div class="spinner"></div>
+      <p>{{ 'certificates.loading' | translate }}</p>
+    </div>
+  } @else if (currentCertificate(); as certificate) {
+    <div class="carousel-header">
+      <div class="certificate-info">
+        <h2>{{ certificate.title }}</h2>
+        <p>
+          @if (certificate.issuer) {
+            <span>{{ certificate.issuer }}</span>
+            <span class="separator">&middot;</span>
+          }
+          <span>{{ certificate.date }}</span>
+        </p>
+      </div>
+
+      <a class="download-button" [href]="certificate.file" download>
+        <i class="fas fa-download"></i>
+        <span>{{ 'certificates.download' | translate }}</span>
+      </a>
+    </div>
+
+    <div class="carousel-container">
+      @if (hasManyCertificates()) {
+        <button
+          class="nav-button"
+          type="button"
+          [title]="'certificates.prev' | translate"
+          [attr.aria-label]="'certificates.prev' | translate"
+          (click)="previous()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      }
+
+      <div class="pdf-container">
+        <iframe
+          [src]="certificate.file | safe"
+          class="pdf-viewer"
+          [title]="'certificates.pdfPreview' | translate"
+          frameborder="0">
+        </iframe>
+      </div>
+
+      @if (hasManyCertificates()) {
+        <button
+          class="nav-button"
+          type="button"
+          [title]="'certificates.next' | translate"
+          [attr.aria-label]="'certificates.next' | translate"
+          (click)="next()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      }
+    </div>
+
+    @if (hasManyCertificates()) {
+      <div class="carousel-controls">
+        <div class="slide-indicators">
+          @for (item of certificates(); track item.id; let i = $index) {
+            <button
+              class="indicator-dot"
+              type="button"
+              [class.active]="i === currentIndex()"
+              [attr.aria-label]="item.title"
+              (click)="goToSlide(i)">
+            </button>
+          }
+        </div>
+
+        <div class="slide-counter">{{ currentIndex() + 1 }} / {{ certificates().length }}</div>
+      </div>
+    }
+  } @else {
+    <div class="carousel-placeholder">
+      <i class="fas fa-exclamation-triangle fa-4x"></i>
+      <p>{{ 'certificates.none' | translate }}</p>
+    </div>
+  }
+</div>

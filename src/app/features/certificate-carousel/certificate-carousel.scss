@@ -1,0 +1,209 @@
+.certificate-carousel {
+  width: 100%;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--neon-emerald-10);
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--black-30);
+}
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  padding: var(--spacing-xl);
+  border-bottom: 1px solid var(--neon-emerald-10);
+
+  .certificate-info {
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 var(--spacing-sm);
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .separator {
+      margin: 0 var(--spacing-xs);
+      color: var(--neon-emerald);
+    }
+  }
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: var(--neon-emerald-10);
+  border: 1px solid var(--neon-emerald-30);
+  color: var(--neon-emerald);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    background: var(--neon-emerald-20);
+    border-color: var(--neon-emerald);
+    box-shadow: 0 0 20px var(--neon-emerald-30);
+    transform: translateY(-2px);
+  }
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+.nav-button {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--neon-emerald-10);
+  border: 1px solid var(--neon-emerald-30);
+  color: var(--neon-emerald);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+
+  &:hover {
+    background: var(--neon-emerald-20);
+    border-color: var(--neon-emerald);
+    box-shadow: 0 0 20px var(--neon-emerald-30);
+    transform: scale(1.1);
+  }
+}
+
+.pdf-container {
+  flex: 1;
+  min-width: 0;
+  height: 70vh;
+  min-height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--neon-emerald-20);
+  background: var(--bg-tertiary);
+
+  .pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background: var(--bg-tertiary);
+  border-top: 1px solid var(--neon-emerald-10);
+}
+
+.slide-indicators {
+  display: flex;
+  gap: var(--spacing-sm);
+
+  .indicator-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--neon-emerald-20);
+    border: 1px solid var(--neon-emerald-30);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+
+    &:hover {
+      background: var(--neon-emerald-30);
+      border-color: var(--neon-emerald);
+    }
+
+    &.active {
+      background: var(--neon-emerald);
+      border-color: var(--neon-emerald);
+      box-shadow: 0 0 10px var(--neon-emerald-50);
+    }
+  }
+}
+
+.slide-counter {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.carousel-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  padding: var(--spacing-2xl);
+  text-align: center;
+  color: var(--neon-emerald);
+
+  i {
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 0 10px var(--neon-emerald);
+    opacity: 0.85;
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--neon-emerald-10);
+    border-top: 3px solid var(--neon-emerald);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  p {
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-header,
+  .carousel-container {
+    padding: var(--spacing-md);
+  }
+
+  .carousel-container {
+    gap: var(--spacing-sm);
+  }
+
+  .nav-button {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .pdf-container {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .carousel-controls {
+    padding: var(--spacing-md);
+  }
+}
