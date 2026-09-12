@@ -34,6 +34,10 @@ const IMMUTABLE_FILE = /\.(?:js|css)$/;
 app.use(
   express.static(browserDir, {
     index: false,
+    // The certificates and projects data folders share their names with client
+    // side routes. Without this, /certificates would 301 to /certificates/
+    // instead of falling through to index.html.
+    redirect: false,
     setHeaders: (res, filePath) => {
       const cacheControl = IMMUTABLE_FILE.test(filePath)
         ? 'public, max-age=31536000, immutable'
