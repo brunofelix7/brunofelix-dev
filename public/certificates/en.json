@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ai-engineering",
+    "title": "Postgraduate Degree in Artificial Intelligence Engineering",
+    "issuer": "Lato Sensu Specialization - 400 hours",
+    "date": "2024",
+    "file": "assets/pdf/pos_ia.pdf"
+  },
+  {
+    "id": "siele-global",
+    "title": "SIELE Global - Spanish Proficiency",
+    "issuer": "Instituto Cervantes - CEFR level B1",
+    "date": "2023",
+    "file": "assets/pdf/siele_global.pdf"
+  }
+]

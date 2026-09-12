@@ -1,0 +1,16 @@
+[
+  {
+    "id": "ai-engineering",
+    "title": "Pós-Graduação em Engenharia de Inteligência Artificial",
+    "issuer": "Especialização Lato Sensu - 400 horas",
+    "date": "2024",
+    "file": "assets/pdf/pos_ia.pdf"
+  },
+  {
+    "id": "siele-global",
+    "title": "SIELE Global - Proficiência em Espanhol",
+    "issuer": "Instituto Cervantes - nível B1 do QECR",
+    "date": "2023",
+    "file": "assets/pdf/siele_global.pdf"
+  }
+]
