@@ -9,10 +9,9 @@
 
 .carousel-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--spacing-lg);
-  flex-wrap: wrap;
   padding: var(--spacing-xl);
   border-bottom: 1px solid var(--neon-emerald-10);
 
@@ -39,6 +38,7 @@
 
 .download-button {
   display: inline-flex;
+  align-self: center;
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-md) var(--spacing-lg);
@@ -92,8 +92,8 @@
 .pdf-container {
   flex: 1;
   min-width: 0;
-  height: 70vh;
-  min-height: 500px;
+  height: var(--pdf-viewer-height);
+  min-height: var(--pdf-viewer-min-height);
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--neon-emerald-20);
@@ -196,11 +196,6 @@
     width: 38px;
     height: 38px;
     font-size: 1rem;
-  }
-
-  .pdf-container {
-    height: 60vh;
-    min-height: 380px;
   }
 
   .carousel-controls {

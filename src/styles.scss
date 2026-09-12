@@ -8,6 +8,12 @@
     --max-content-width: 1200px;
     --horizontal-padding: 1rem;
 
+    /* PDF Viewer */
+    --pdf-viewer-height: 70vh;
+    --pdf-viewer-min-height: 500px;
+    /* Header + controls + padding of the certificate carousel card */
+    --pdf-viewer-chrome: 353px;
+
     /* Colors - Retrowave/Neon Palette with Green Focus */
     --bg-primary: #000000;
     --bg-secondary: #1F1F1F;
@@ -192,6 +198,9 @@ a:focus:not(.nav-link):not(.mobile-nav-link):not(.logo) {
         --horizontal-padding: 0.75rem;
         --spacing-xl: 1.5rem;
         --spacing-2xl: 2rem;
+        --pdf-viewer-height: 60vh;
+        --pdf-viewer-min-height: 380px;
+        --pdf-viewer-chrome: 273px;
     }
 
     .main-content {
