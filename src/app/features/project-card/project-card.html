@@ -1,0 +1,20 @@
+<div class="project-card" (click)="onCardClick()">
+  <div class="preview">
+    @if (project.image) {
+      <img [src]="project.image" [alt]="project.title" />
+    } @else {
+      <div class="placeholder-icon">
+        <i class="fas fa-code"></i>
+      </div>
+    }
+  </div>
+
+  <h3 class="title">{{ project.title }}</h3>
+  <p class="description">{{ project.description }}</p>
+
+  <div class="project-tags">
+    @for (tag of project.tags.slice(0, 3); track tag) {
+      <app-tag [label]="tag"></app-tag>
+    }
+  </div>
+</div>
