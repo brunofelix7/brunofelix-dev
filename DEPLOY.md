@@ -27,6 +27,35 @@ These steps are done once, from the browser. No CLI required.
 
 Until both secrets exist the build job passes and the deploy job fails.
 
+## Custom domain
+
+`brunofelix.dev` stays registered at GoDaddy, but DNS is served by Cloudflare.
+Heroku only hands out hostnames such as `*.herokudns.com`, never fixed IPs, and
+the DNS spec forbids a CNAME at the zone apex, so the apex needs a provider that
+flattens it. GoDaddy does not. On top of that `.dev` is HSTS preloaded at the
+TLD level, which makes HTTPS mandatory and rules out any apex solution that
+relies on a plain HTTP redirect.
+
+The order below matters: the certificate is only issued once DNS resolves, and
+`CANONICAL_HOST` only works once the certificate is live.
+
+- [ ] Move the app off the free tier. Eco (5 USD/month) already covers custom
+      domains and ACM; it sleeps after 30 minutes without traffic.
+- [ ] `heroku domains:add brunofelix.dev` and `heroku domains:add
+      www.brunofelix.dev`, then read the DNS target of each one with `heroku
+      domains`. Every domain gets its own target.
+- [ ] Create the zone on Cloudflare (free plan), replace the GoDaddy
+      nameservers with the pair it returns and wait for the zone to go active.
+- [ ] Add both records in Cloudflare as **DNS only** (grey cloud, not
+      proxied), otherwise the Let's Encrypt challenge never reaches Heroku:
+      - `CNAME @` → the apex DNS target, flattened by Cloudflare
+      - `CNAME www` → the www DNS target
+- [ ] `heroku certs:auto:enable`, then watch `heroku certs:auto` until both
+      domains report `OK`.
+- [ ] `heroku config:set CANONICAL_HOST=brunofelix.dev`, which makes `www`,
+      plain HTTP and the `herokuapp.com` URL answer 301 to the canonical host
+      and adds the `Strict-Transport-Security` header.
+
 ## Running the production build locally
 
 ```bash
