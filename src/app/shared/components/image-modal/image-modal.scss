@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-xl);
   background: var(--bg-primary-95);
   backdrop-filter: blur(8px);
   opacity: 0;
@@ -36,9 +36,10 @@
 }
 
 .image-wrapper {
-  max-width: min(1100px, 100%);
+  width: min(1600px, 100%);
   border-radius: var(--radius-xl);
   overflow: hidden;
+  background: var(--bg-tertiary);
   border: 1px solid var(--neon-emerald-30);
   box-shadow:
     0 30px 60px var(--black-30),
@@ -51,8 +52,9 @@
 
   img {
     display: block;
-    max-width: 100%;
-    max-height: calc(100vh - var(--spacing-2xl) * 2);
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - var(--spacing-xl) * 2);
     object-fit: contain;
   }
 }
