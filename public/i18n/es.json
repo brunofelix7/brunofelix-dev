@@ -22,6 +22,8 @@
   },
   "projectDetails": {
     "back": "Volver",
-    "loading": "Cargando detalles del proyecto..."
+    "loading": "Cargando detalles del proyecto...",
+    "expandImage": "Ampliar imagen",
+    "closeImage": "Cerrar imagen"
   }
 }

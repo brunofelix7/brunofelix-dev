@@ -1,0 +1,17 @@
+<div
+  class="image-modal"
+  [class.is-open]="isOpen"
+  [attr.aria-hidden]="!isOpen"
+  role="dialog"
+  aria-modal="true"
+  (click)="close()">
+  <button class="close-button" type="button" [attr.aria-label]="closeLabel" (click)="close()">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <div class="image-wrapper" (click)="$event.stopPropagation()">
+    @if (src) {
+      <img [src]="src" [alt]="alt" />
+    }
+  </div>
+</div>

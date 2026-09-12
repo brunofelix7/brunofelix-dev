@@ -22,6 +22,8 @@
   },
   "projectDetails": {
     "back": "Back",
-    "loading": "Loading project details..."
+    "loading": "Loading project details...",
+    "expandImage": "Expand image",
+    "closeImage": "Close image"
   }
 }
