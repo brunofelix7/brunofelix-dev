@@ -1,1 +1,30 @@
-<p>cv works!</p>
+<app-container>
+  <div class="cv-header" appFadeIn [delay]="0">
+    <h1>{{ 'cv.title' | translate }}</h1>
+    <p>{{ 'cv.subtitle' | translate }}</p>
+
+    <a class="download-button" [href]="cvUrl()" download>
+      <i class="fas fa-download"></i>
+      <span>{{ 'cv.download' | translate }}</span>
+    </a>
+  </div>
+
+  <div class="cv-content">
+    @if (cvAvailable()) {
+      <div class="pdf-container">
+        <iframe
+          [src]="cvUrl() | safe"
+          class="pdf-viewer"
+          [title]="'cv.pdfPreview' | translate"
+          frameborder="0"
+          (error)="onPdfError()">
+        </iframe>
+      </div>
+    } @else {
+      <div class="pdf-placeholder">
+        <i class="fas fa-exclamation-triangle fa-4x"></i>
+        <p>{{ 'cv.none' | translate }}</p>
+      </div>
+    }
+  </div>
+</app-container>
