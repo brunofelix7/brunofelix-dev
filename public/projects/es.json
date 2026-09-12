@@ -1,0 +1,146 @@
+[
+  {
+    "id": "postrainer",
+    "title": "PosTrainer",
+    "description": "Aplicación Android que ayuda a crear hábitos de postura más saludables mediante recordatorios inteligentes y personalizables a lo largo del día.",
+    "image": "assets/images/project-placeholder.svg",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "Room", "WorkManager", "MVVM"],
+    "sourceUrl": "https://github.com/brunofelix7/PosTrainerOpen",
+    "liveUrl": "",
+    "downloadUrl": "",
+    "detailedDescription": [
+      {
+        "title": "Descripción general",
+        "content": "PosTrainer permite crear recordatorios recurrentes con horarios, días de repetición y estilos de alerta personalizados, para que corrijas tu postura de forma constante sin tener que pensar en ello."
+      },
+      {
+        "title": "Arquitectura",
+        "content": "Construido con una arquitectura de actividad única siguiendo los principios de MVVM y Clean Architecture. La capa de UI es totalmente declarativa con Jetpack Compose, mientras que la persistencia local usa Room y la programación en segundo plano usa WorkManager y AlarmManager."
+      },
+      {
+        "title": "Puntos destacados",
+        "content": "Offline-first por diseño, con alarmas fiables que sobreviven al reinicio del dispositivo, tema dinámico con Material 3 y pruebas unitarias que cubren las reglas de programación de los recordatorios."
+      }
+    ]
+  },
+  {
+    "id": "kmp-shared-core",
+    "title": "KMP Shared Core",
+    "description": "Módulo Kotlin Multiplatform que comparte red, persistencia y reglas de negocio entre Android e iOS desde una única base de código.",
+    "image": "assets/images/project-placeholder.svg",
+    "tags": ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "SQLDelight", "Coroutines"],
+    "sourceUrl": "",
+    "liveUrl": "",
+    "downloadUrl": "",
+    "detailedDescription": [
+      {
+        "title": "Descripción general",
+        "content": "Una biblioteca central compartida que reúne las partes de una app móvil que no tienen por qué escribirse dos veces: clientes de API, caché, modelos, validación y casos de uso."
+      },
+      {
+        "title": "Arquitectura",
+        "content": "El source set común expone casos de uso respaldados por Ktor para la red y SQLDelight para el almacenamiento local. Android lo consume directamente con Kotlin, e iOS mediante un framework generado con una API amigable para Swift."
+      },
+      {
+        "title": "Puntos destacados",
+        "content": "Alrededor del 70% del código se comparte entre plataformas mientras cada app mantiene su UI nativa, además de una única suite de pruebas comunes que valida las reglas de negocio de ambos targets a la vez."
+      }
+    ]
+  },
+  {
+    "id": "indra-films",
+    "title": "IndraFilms",
+    "description": "Aplicación de catálogo de películas hecha en Kotlin, que consume una API REST pública con búsqueda, favoritos y pantalla de detalles.",
+    "image": "assets/images/project-placeholder.svg",
+    "tags": ["Kotlin", "Android", "Retrofit", "MVVM", "Material Design"],
+    "sourceUrl": "https://github.com/brunofelix7/IndraFilms-Android",
+    "liveUrl": "",
+    "downloadUrl": "",
+    "detailedDescription": [
+      {
+        "title": "Descripción general",
+        "content": "Una app para explorar películas por categoría, buscar en el catálogo y guardar favoritos localmente para acceder sin conexión."
+      },
+      {
+        "title": "Arquitectura",
+        "content": "MVVM con LiveData y Coroutines, Retrofit en la capa de API y un repositorio que recurre de forma transparente a la caché local cuando no hay red disponible."
+      },
+      {
+        "title": "Puntos destacados",
+        "content": "Desplazamiento fluido con paginación y caché de imágenes, además de transiciones de elementos compartidos entre el catálogo y la pantalla de detalles de la película."
+      }
+    ]
+  },
+  {
+    "id": "compose-design-system",
+    "title": "Compose Design System",
+    "description": "Biblioteca reutilizable de componentes en Jetpack Compose con tema, tipografía y bloques accesibles documentados en un catálogo vivo.",
+    "image": "assets/images/project-placeholder.svg",
+    "tags": ["Kotlin", "Jetpack Compose", "Material 3", "Design System", "Accesibilidad"],
+    "sourceUrl": "",
+    "liveUrl": "",
+    "downloadUrl": "",
+    "detailedDescription": [
+      {
+        "title": "Descripción general",
+        "content": "Una biblioteca de componentes que convierte los design tokens en una base consistente y personalizable, para que los equipos de producto dejen de reconstruir botones, campos y diálogos en cada pantalla."
+      },
+      {
+        "title": "Arquitectura",
+        "content": "Tokens de color, espaciado, elevación y tipografía alimentan un tema personalizado de Compose. Cada componente es stateless por defecto y expone su estado mediante parámetros elevados, de modo que sigue siendo fácil de probar y previsualizar."
+      },
+      {
+        "title": "Puntos destacados",
+        "content": "Una app de escaparate documenta cada componente y variante, con pruebas de captura de pantalla que protegen contra regresiones visuales y soporte completo para tema claro, oscuro y colores dinámicos."
+      }
+    ]
+  },
+  {
+    "id": "swiftui-notes",
+    "title": "Notes para iOS",
+    "description": "Aplicación de notas offline-first para iOS construida con SwiftUI y SwiftData, con etiquetas, búsqueda de texto completo y sincronización con iCloud.",
+    "image": "assets/images/project-placeholder.svg",
+    "tags": ["Swift", "SwiftUI", "SwiftData", "iOS", "MVVM"],
+    "sourceUrl": "",
+    "liveUrl": "",
+    "downloadUrl": "",
+    "detailedDescription": [
+      {
+        "title": "Descripción general",
+        "content": "Una app de notas rápida y sin distracciones, donde todo funciona sin conexión y se sincroniza entre dispositivos en cuanto hay conexión disponible."
+      },
+      {
+        "title": "Arquitectura",
+        "content": "Vistas declarativas en SwiftUI impulsadas por view models observables, con SwiftData encargándose de la persistencia y CloudKit de la sincronización y la resolución de conflictos."
+      },
+      {
+        "title": "Puntos destacados",
+        "content": "Búsqueda de texto completo en notas y etiquetas, soporte de Dynamic Type y VoiceOver en toda la app, y un widget que muestra las notas recientes en la pantalla de inicio."
+      }
+    ]
+  },
+  {
+    "id": "brunofelix-dev",
+    "title": "brunofelix.dev",
+    "description": "Este portafolio: una single page application multilingüe construida con Angular para presentar mi carrera, proyectos y certificados.",
+    "image": "assets/images/project-placeholder.svg",
+    "tags": ["Angular", "TypeScript", "SCSS", "Signals", "i18n"],
+    "sourceUrl": "https://github.com/brunofelix7/brunofelix-dev",
+    "liveUrl": "https://www.brunofelix.dev",
+    "downloadUrl": "",
+    "detailedDescription": [
+      {
+        "title": "Descripción general",
+        "content": "Un sitio personal que reúne mi trayectoria profesional, proyectos paralelos y certificados, disponible en inglés, español y portugués."
+      },
+      {
+        "title": "Arquitectura",
+        "content": "Componentes standalone de Angular con rutas cargadas bajo demanda dentro de un shell compartido. El estado se maneja con signals, y el contenido se carga en tiempo de ejecución desde archivos JSON resueltos según el idioma activo."
+      },
+      {
+        "title": "Puntos destacados",
+        "content": "Un tema neón personalizado sobre variables CSS y utilidades SCSS, animaciones de fade-in activadas por el scroll mediante una directiva con IntersectionObserver, y un diseño responsivo ajustado desde móvil hasta pantallas anchas."
+      }
+    ]
+  }
+]
