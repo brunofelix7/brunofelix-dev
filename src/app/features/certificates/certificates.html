@@ -1,1 +1,10 @@
-<p>certificates works!</p>
+<app-container>
+  <div class="certificates-header" appFadeIn [delay]="0">
+    <h1>{{ 'certificates.title' | translate }}</h1>
+    <p>{{ 'certificates.subtitle' | translate }}</p>
+  </div>
+
+  <div class="certificates-content">
+    <app-certificate-carousel></app-certificate-carousel>
+  </div>
+</app-container>
