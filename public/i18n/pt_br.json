@@ -11,17 +11,17 @@
     "personal_email": "Gmail"
   },
   "projects": {
-    "title": "What I've Built",
-    "subtitle": "Explore my projects, achievements, and creative ventures. Each project represents a unique challenge and learning experience.",
-    "technologies": "Technologies Used",
-    "empty": "No projects found. Something went wrong. Please try refreshing the page.",
-    "sourceCode": "Source Code",
-    "demo": "Demo",
+    "title": "Portfólio",
+    "subtitle": "Explore meus projetos e realizações através do meu portfólio.",
+    "technologies": "Tecnologias utilizadas",
+    "empty": "Nenhum projeto encontrado. Algo deu errado. Tente atualizar a página.",
+    "sourceCode": "Código-fonte",
+    "demo": "Demonstração",
     "download": "Download",
-    "projectLinks": "Project Links"
+    "projectLinks": "Links do projeto"
   },
   "projectDetails": {
-    "back": "Back",
-    "loading": "Loading project details..."
+    "back": "Voltar",
+    "loading": "Carregando detalhes do projeto..."
   }
 }
