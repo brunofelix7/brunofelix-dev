@@ -9,9 +9,7 @@
     @for (project of projects(); track trackByProject($index, project)) {
       <app-project-card
         [project]="project"
-        (cardClick)="onProjectClick($event)"
-        appFadeIn
-        [delay]="200">
+        (cardClick)="onProjectClick($event)">
       </app-project-card>
     }
     @if (!hasProjects()) {
