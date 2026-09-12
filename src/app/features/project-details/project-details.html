@@ -1,0 +1,107 @@
+<app-container>
+  <div class="back-button-container" appFadeIn [delay]="0">
+    <button class="back-button" type="button" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i>
+      <span>{{ 'projectDetails.back' | translate }}</span>
+    </button>
+  </div>
+
+  @if (project(); as project) {
+    <div class="project-details-content">
+      <div class="left-section" appFadeIn [delay]="200">
+        <div class="media-section">
+          @if (project.youtubeUrl) {
+            <div class="youtube-player">
+              <iframe
+                [src]="project.youtubeUrl | safe"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          } @else if (project.image) {
+            <div class="project-image">
+              <img [src]="project.image" [alt]="project.title" />
+            </div>
+          } @else {
+            <div class="placeholder-image">
+              <div class="placeholder-icon">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+          }
+        </div>
+
+        <div class="tags-section" appFadeIn [delay]="400">
+          <h3>{{ 'projects.technologies' | translate }}</h3>
+          <div class="tags">
+            @for (tag of project.tags; track tag) {
+              <app-tag [label]="tag"></app-tag>
+            }
+          </div>
+        </div>
+
+        @if (hasProjectLinks) {
+          <div class="links-section" appFadeIn [delay]="600">
+            <h3>{{ 'projects.projectLinks' | translate }}</h3>
+            <div class="project-links">
+              @if (project.sourceUrl) {
+                <a
+                  [href]="project.sourceUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link source-link">
+                  <i class="fab fa-github"></i>
+                  <span>{{ 'projects.sourceCode' | translate }}</span>
+                </a>
+              }
+              @if (project.liveUrl) {
+                <a
+                  [href]="project.liveUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link live-link">
+                  <i class="fas fa-external-link-alt"></i>
+                  <span>{{ 'projects.demo' | translate }}</span>
+                </a>
+              }
+              @if (project.downloadUrl) {
+                <a
+                  [href]="project.downloadUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link download-link">
+                  <i class="fas fa-download"></i>
+                  <span>{{ 'projects.download' | translate }}</span>
+                </a>
+              }
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="right-section" appFadeIn [delay]="400">
+        <div class="project-info">
+          <h1 class="project-title" appFadeIn [delay]="600">{{ project.title }}</h1>
+          <p class="project-description" appFadeIn [delay]="800">{{ project.description }}</p>
+
+          @if (project.detailedDescription) {
+            <div class="project-sections" appFadeIn [delay]="1000">
+              @for (section of project.detailedDescription; track section.title) {
+                <div class="detail-section">
+                  <h3>{{ section.title }}</h3>
+                  <p>{{ section.content }}</p>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="loading-state" appFadeIn [delay]="200">
+      <div class="spinner"></div>
+      <p>{{ 'projectDetails.loading' | translate }}</p>
+    </div>
+  }
+</app-container>
