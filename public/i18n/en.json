@@ -2,7 +2,7 @@
   "about": {
     "title": "Hi, I'm",
     "description": [
-      "Senior Android Engineer with over 9 years of experience in architecture, testing, and performance optimization. Specialist in the native ecosystem, with deep expertise in Kotlin and Jetpack Compose for building modern applications."
+      "Senior Android Engineer with over 9 years of experience in architecture, testing, and performance optimization. Specialist in the native ecosystem, with deep expertise in Kotlin and Jetpack Compose."
     ]
   },
   "links": {
@@ -34,8 +34,8 @@
     "none": "Failed to load the CV or it is unavailable."
   },
   "certificates": {
-    "title": "Certificates & Achievements",
-    "subtitle": "Courses and certifications I have completed along the way.",
+    "title": "Certificates",
+    "subtitle": "Courses and certifications I have completed, available to browse and download.",
     "pdfPreview": "Certificate PDF preview",
     "download": "Download PDF",
     "prev": "Previous certificate",

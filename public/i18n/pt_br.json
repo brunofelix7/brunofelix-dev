@@ -2,7 +2,7 @@
   "about": {
     "title": "Olá, eu sou",
     "description": [
-      "Desenvolvedor Android Sênior com mais de 9 anos de experiência em arquitetura, testes e otimização de desempenho. Especialista no ecossistema nativo, com profundo conhecimento em Kotlin e Jetpack Compose para o desenvolvimento de aplicativos modernos."
+      "Desenvolvedor Android Sênior com mais de 9 anos de experiência em arquitetura, testes e otimização de desempenho. Especialista no ecossistema nativo, com profundo conhecimento em Kotlin e Jetpack Compose."
     ]
   },
   "links": {
@@ -34,8 +34,8 @@
     "none": "Não foi possível carregar o currículo ou ele está indisponível."
   },
   "certificates": {
-    "title": "Certificados e Conquistas",
-    "subtitle": "Cursos e certificações que concluí ao longo da minha trajetória.",
+    "title": "Certificados",
+    "subtitle": "Cursos e certificações que concluí, disponíveis para visualizar e baixar.",
     "pdfPreview": "Pré-visualização do certificado em PDF",
     "download": "Baixar PDF",
     "prev": "Certificado anterior",
