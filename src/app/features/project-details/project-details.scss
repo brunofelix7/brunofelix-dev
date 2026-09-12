@@ -126,8 +126,8 @@
   .project-link {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-xl);
     background: var(--bg-secondary);
     border: 1px solid transparent;
     border-radius: var(--radius-lg);
