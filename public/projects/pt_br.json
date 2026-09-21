@@ -1,25 +1,26 @@
 [
   {
-    "id": "postrainer",
-    "title": "PosTrainer",
-    "description": "Aplicativo Android que ajuda a criar hábitos de postura mais saudáveis por meio de lembretes inteligentes e personalizáveis ao longo do dia.",
-    "image": "assets/images/project-placeholder.svg",
-    "tags": ["Kotlin", "Android", "Jetpack Compose", "Room", "WorkManager", "MVVM"],
-    "sourceUrl": "https://github.com/brunofelix7/PosTrainerOpen",
+    "id": "movies-compose",
+    "title": "Movies Explorer",
+    "description": "Aplicativo Android moderno que permite explorar filmes e séries de TV usando a API do TMDB.",
+    "image": "assets/images/movies-explorer/movies-screenshot-02.png",
+    "detailImage": "assets/images/movies-explorer/movies-combined.png",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "MVVM", "Clean Architecture", "Coroutines"],
+    "sourceUrl": "https://github.com/brunofelix7/movies-compose",
     "liveUrl": "",
     "downloadUrl": "",
     "detailedDescription": [
       {
         "title": "Visão geral",
-        "content": "O PosTrainer permite criar lembretes recorrentes com horários, dias de repetição e estilos de alerta personalizados, para que você corrija a postura de forma consistente sem precisar pensar nisso."
+        "content": "O Movies Explorer é um aplicativo Android moderno que permite explorar filmes e programas de TV usando a API TMDB. O projeto foi desenvolvido com foco em tecnologias atuais, seguindo as melhores práticas para o desenvolvimento Android."
       },
       {
         "title": "Arquitetura",
-        "content": "Construído com arquitetura de activity única seguindo os princípios de MVVM e Clean Architecture. A camada de UI é totalmente declarativa com Jetpack Compose, enquanto a persistência local usa Room e o agendamento em segundo plano usa WorkManager e AlarmManager."
+        "content": "O projeto usa a arquitetura MVVM (Model-View-ViewModel) combinada com os princípios de Clean Architecture, garantindo uma separação clara de responsabilidades, facilidade de manutenção e testabilidade. Inclui camadas de Data, Domain, Presentation e Core."
       },
       {
         "title": "Destaques",
-        "content": "Offline-first por design, com alarmes confiáveis que sobrevivem à reinicialização do aparelho, tema dinâmico com Material 3 e testes unitários cobrindo as regras de agendamento dos lembretes."
+        "content": "Exploração suave de filmes e programas de TV, UI declarativa com Jetpack Compose, programação assíncrona e fluxos de dados reativos usando Coroutines e Flow."
       }
     ]
   },

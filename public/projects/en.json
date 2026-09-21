@@ -1,25 +1,26 @@
 [
   {
-    "id": "postrainer",
-    "title": "PosTrainer",
-    "description": "Android app that helps you build healthier posture habits through smart, customizable reminders throughout your day.",
-    "image": "assets/images/project-placeholder.svg",
-    "tags": ["Kotlin", "Android", "Jetpack Compose", "Room", "WorkManager", "MVVM"],
-    "sourceUrl": "https://github.com/brunofelix7/PosTrainerOpen",
+    "id": "movies-compose",
+    "title": "Movies Explorer",
+    "description": "Modern Android application that allows you to explore movies and TV shows using the TMDB API.",
+    "image": "assets/images/movies-explorer/movies-screenshot-02.png",
+    "detailImage": "assets/images/movies-explorer/movies-combined.png",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "MVVM", "Clean Architecture", "Coroutines"],
+    "sourceUrl": "https://github.com/brunofelix7/movies-compose",
     "liveUrl": "",
     "downloadUrl": "",
     "detailedDescription": [
       {
         "title": "Overview",
-        "content": "PosTrainer lets you create recurring reminders with custom schedules, repeat days and alert styles, so you can correct your posture consistently without having to think about it."
+        "content": "Movies Explorer is a modern Android application that allows you to explore movies and TV shows using the TMDB API. The project was developed with a focus on current technologies, following the best practices for Android development."
       },
       {
         "title": "Architecture",
-        "content": "Built with a single-activity architecture following MVVM and Clean Architecture principles. The UI layer is fully declarative with Jetpack Compose, while local persistence is handled by Room and background scheduling by WorkManager and AlarmManager."
+        "content": "The project uses the MVVM (Model-View-ViewModel) architecture combined with Clean Architecture principles, ensuring a clear separation of concerns, ease of maintenance, and testability. Includes Data, Domain, Presentation and Core layers."
       },
       {
         "title": "Highlights",
-        "content": "Offline-first by design, with reliable alarms that survive device reboots, Material 3 dynamic theming, and unit tests covering the reminder scheduling rules."
+        "content": "Smooth exploration of movies and TV shows, declarative UI with Jetpack Compose, asynchronous programming and reactive data streams using Coroutines and Flow."
       }
     ]
   },

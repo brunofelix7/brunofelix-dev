@@ -1,25 +1,26 @@
 [
   {
-    "id": "postrainer",
-    "title": "PosTrainer",
-    "description": "Aplicación Android que ayuda a crear hábitos de postura más saludables mediante recordatorios inteligentes y personalizables a lo largo del día.",
-    "image": "assets/images/project-placeholder.svg",
-    "tags": ["Kotlin", "Android", "Jetpack Compose", "Room", "WorkManager", "MVVM"],
-    "sourceUrl": "https://github.com/brunofelix7/PosTrainerOpen",
+    "id": "movies-compose",
+    "title": "Movies Explorer",
+    "description": "Aplicación Android moderna que permite explorar películas y series de televisión utilizando la API de TMDB.",
+    "image": "assets/images/movies-explorer/movies-screenshot-02.png",
+    "detailImage": "assets/images/movies-explorer/movies-combined.png",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "MVVM", "Clean Architecture", "Coroutines"],
+    "sourceUrl": "https://github.com/brunofelix7/movies-compose",
     "liveUrl": "",
     "downloadUrl": "",
     "detailedDescription": [
       {
         "title": "Descripción general",
-        "content": "PosTrainer permite crear recordatorios recurrentes con horarios, días de repetición y estilos de alerta personalizados, para que corrijas tu postura de forma constante sin tener que pensar en ello."
+        "content": "Movies Explorer es una aplicación Android moderna que permite explorar películas y programas de televisión utilizando la API de TMDB. El proyecto fue desarrollado con un enfoque en tecnologías actuales, siguiendo las mejores prácticas para el desarrollo de Android."
       },
       {
         "title": "Arquitectura",
-        "content": "Construido con una arquitectura de actividad única siguiendo los principios de MVVM y Clean Architecture. La capa de UI es totalmente declarativa con Jetpack Compose, mientras que la persistencia local usa Room y la programación en segundo plano usa WorkManager y AlarmManager."
+        "content": "El proyecto utiliza la arquitectura MVVM (Model-View-ViewModel) combinada con principios de Clean Architecture, lo que garantiza una clara separación de responsabilidades, facilidad de mantenimiento y capacidad de prueba. Incluye las capas de Data, Domain, Presentation y Core."
       },
       {
         "title": "Puntos destacados",
-        "content": "Offline-first por diseño, con alarmas fiables que sobreviven al reinicio del dispositivo, tema dinámico con Material 3 y pruebas unitarias que cubren las reglas de programación de los recordatorios."
+        "content": "Exploración fluida de películas y programas de televisión, UI declarativa con Jetpack Compose, programación asíncrona y flujos de datos reactivos utilizando Coroutines y Flow."
       }
     ]
   },

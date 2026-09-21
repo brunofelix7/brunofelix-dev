@@ -19,13 +19,13 @@
                 allowfullscreen>
               </iframe>
             </div>
-          } @else if (project.image) {
+          } @else if (project.detailImage || project.image) {
             <button
               class="project-image"
               type="button"
               [attr.aria-label]="'projectDetails.expandImage' | translate"
               (click)="openImageModal()">
-              <img [src]="project.image" [alt]="project.title" />
+              <img [src]="project.detailImage || project.image" [alt]="project.title" />
               <span class="zoom-hint">
                 <i class="fas fa-expand"></i>
               </span>
@@ -108,7 +108,7 @@
 
     <app-image-modal
       [isOpen]="isImageModalOpen()"
-      [src]="project.image"
+      [src]="project.detailImage || project.image"
       [alt]="project.title"
       [closeLabel]="'projectDetails.closeImage' | translate"
       (closed)="closeImageModal()" />

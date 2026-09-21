@@ -3,6 +3,7 @@ export interface Project {
     title: string;
     description: string;
     image: string;
+    detailImage?: string;
     tags: string[];
     youtubeUrl?: string;
     sourceUrl?: string;
