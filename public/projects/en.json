@@ -25,26 +25,27 @@
     ]
   },
   {
-    "id": "kmp-shared-core",
-    "title": "KMP Shared Core",
-    "description": "A Kotlin Multiplatform module that shares networking, persistence and business rules between Android and iOS from a single codebase.",
-    "image": "assets/images/project-placeholder.svg",
-    "tags": ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "SQLDelight", "Coroutines"],
-    "sourceUrl": "",
+    "id": "moises-android-challenge",
+    "title": "Moises Android Challenge",
+    "description": "Modern Android application that allows you to explore, search, and play songs using the iTunes API.",
+    "image": "assets/images/moises-challenge/moises-screenshot-03.png",
+    "detailImage": "assets/images/moises-challenge/moises-combined.png",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "MVVM", "Clean Architecture", "Media3", "Room"],
+    "sourceUrl": "https://github.com/brunofelix7/moises-android-challenge",
     "liveUrl": "",
-    "downloadUrl": "",
+    "downloadUrl": "https://github.com/brunofelix7/moises-android-challenge/releases/download/v2.0.0/app-release.apk",
     "detailedDescription": [
       {
         "title": "Overview",
-        "content": "A shared core library that centralizes the parts of a mobile app that have no reason to be written twice: API clients, caching, models, validation and use cases."
+        "content": "Moises Android Challenge is a modern Android application that allows you to explore, search, and play songs using the iTunes API. The project was developed with a focus on current technologies, following the best practices for Android development."
       },
       {
         "title": "Architecture",
-        "content": "The common source set exposes use cases backed by Ktor for networking and SQLDelight for local storage. Android consumes it directly through Kotlin, and iOS through a generated framework with a Swift-friendly API surface."
+        "content": "The project uses the MVVM (Model-View-ViewModel) architecture combined with Clean Architecture principles, ensuring a clear separation of concerns, ease of maintenance, and testability. Includes Data, Domain, Presentation and Core layers."
       },
       {
         "title": "Highlights",
-        "content": "Roughly 70% of the code is shared across platforms while each app keeps its own native UI, plus a single suite of common tests that validates business rules for both targets at once."
+        "content": "Seamless song playback with ExoPlayer, robust local caching with Room and Paging 3, and a smooth declarative UI using Jetpack Compose."
       }
     ]
   },

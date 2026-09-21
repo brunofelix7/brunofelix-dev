@@ -25,26 +25,27 @@
     ]
   },
   {
-    "id": "kmp-shared-core",
-    "title": "KMP Shared Core",
-    "description": "Módulo Kotlin Multiplatform que comparte red, persistencia y reglas de negocio entre Android e iOS desde una única base de código.",
-    "image": "assets/images/project-placeholder.svg",
-    "tags": ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "SQLDelight", "Coroutines"],
-    "sourceUrl": "",
+    "id": "moises-android-challenge",
+    "title": "Moises Android Challenge",
+    "description": "Aplicación Android moderna que permite explorar, buscar y reproducir canciones utilizando la API de iTunes.",
+    "image": "assets/images/moises-challenge/moises-screenshot-03.png",
+    "detailImage": "assets/images/moises-challenge/moises-combined.png",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "MVVM", "Clean Architecture", "Media3", "Room"],
+    "sourceUrl": "https://github.com/brunofelix7/moises-android-challenge",
     "liveUrl": "",
-    "downloadUrl": "",
+    "downloadUrl": "https://github.com/brunofelix7/moises-android-challenge/releases/download/v2.0.0/app-release.apk",
     "detailedDescription": [
       {
         "title": "Descripción general",
-        "content": "Una biblioteca central compartida que reúne las partes de una app móvil que no tienen por qué escribirse dos veces: clientes de API, caché, modelos, validación y casos de uso."
+        "content": "Moises Android Challenge es una aplicación Android moderna que permite explorar, buscar y reproducir canciones utilizando la API de iTunes. El proyecto fue desarrollado con un enfoque en tecnologías actuales, siguiendo las mejores prácticas para el desarrollo de Android."
       },
       {
         "title": "Arquitectura",
-        "content": "El source set común expone casos de uso respaldados por Ktor para la red y SQLDelight para el almacenamiento local. Android lo consume directamente con Kotlin, e iOS mediante un framework generado con una API amigable para Swift."
+        "content": "El proyecto utiliza la arquitectura MVVM (Model-View-ViewModel) combinada con principios de Clean Architecture, lo que garantiza una clara separación de responsabilidades, facilidad de mantenimiento y capacidad de prueba. Incluye las capas de Data, Domain, Presentation y Core."
       },
       {
         "title": "Puntos destacados",
-        "content": "Alrededor del 70% del código se comparte entre plataformas mientras cada app mantiene su UI nativa, además de una única suite de pruebas comunes que valida las reglas de negocio de ambos targets a la vez."
+        "content": "Reproducción perfecta de canciones con ExoPlayer, almacenamiento en caché local robusto con Room y Paging 3, y una interfaz de usuario declarativa fluida utilizando Jetpack Compose."
       }
     ]
   },

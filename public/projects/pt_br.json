@@ -25,26 +25,27 @@
     ]
   },
   {
-    "id": "kmp-shared-core",
-    "title": "KMP Shared Core",
-    "description": "Módulo Kotlin Multiplatform que compartilha rede, persistência e regras de negócio entre Android e iOS a partir de uma única base de código.",
-    "image": "assets/images/project-placeholder.svg",
-    "tags": ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "SQLDelight", "Coroutines"],
-    "sourceUrl": "",
+    "id": "moises-android-challenge",
+    "title": "Moises Android Challenge",
+    "description": "Aplicativo Android moderno que permite explorar, pesquisar e reproduzir músicas usando a API do iTunes.",
+    "image": "assets/images/moises-challenge/moises-screenshot-03.png",
+    "detailImage": "assets/images/moises-challenge/moises-combined.png",
+    "tags": ["Kotlin", "Android", "Jetpack Compose", "MVVM", "Clean Architecture", "Media3", "Room"],
+    "sourceUrl": "https://github.com/brunofelix7/moises-android-challenge",
     "liveUrl": "",
-    "downloadUrl": "",
+    "downloadUrl": "https://github.com/brunofelix7/moises-android-challenge/releases/download/v2.0.0/app-release.apk",
     "detailedDescription": [
       {
         "title": "Visão geral",
-        "content": "Uma biblioteca central compartilhada que reúne as partes de um app mobile que não têm motivo para serem escritas duas vezes: clientes de API, cache, modelos, validação e casos de uso."
+        "content": "O Moises Android Challenge é um aplicativo Android moderno que permite explorar, pesquisar e reproduzir músicas usando a API do iTunes. O projeto foi desenvolvido com foco em tecnologias atuais, seguindo as melhores práticas para o desenvolvimento Android."
       },
       {
         "title": "Arquitetura",
-        "content": "O source set comum expõe casos de uso apoiados por Ktor para rede e SQLDelight para armazenamento local. O Android consome diretamente via Kotlin, e o iOS por meio de um framework gerado com uma API amigável ao Swift."
+        "content": "O projeto usa a arquitetura MVVM (Model-View-ViewModel) combinada com os princípios de Clean Architecture, garantindo uma separação clara de responsabilidades, facilidade de manutenção e testabilidade. Inclui camadas de Data, Domain, Presentation e Core."
       },
       {
         "title": "Destaques",
-        "content": "Cerca de 70% do código é compartilhado entre as plataformas enquanto cada app mantém sua UI nativa, além de uma única suíte de testes comuns que valida as regras de negócio dos dois targets de uma só vez."
+        "content": "Reprodução contínua de músicas com ExoPlayer, cache local robusto com Room e Paging 3, e uma interface declarativa fluida usando Jetpack Compose."
       }
     ]
   },
