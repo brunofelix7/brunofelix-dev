@@ -2,6 +2,7 @@
 
 .project-card {
   @extend .card-hover;
+  background: #121212;
   padding: var(--spacing-xl);
   position: relative;
   overflow: hidden;
